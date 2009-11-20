@@ -1,0 +1,17 @@
+= Moonshine Mysql Tools
+
+=== A plugin for Moonshine[http://github.com/railsmachine/moonshine]
+
+A plugin for installing some commonly used mysql tools:
+
+* maatkit
+* xtrabackup
+* mysqltuner.pl
+* mytop
+
+=== Instructions
+
+* <tt>script/plugin install git://github.com/railsmachine/moonshine_mysql_tools.git</tt>
+* Include the plugin and recipe(s) in your Moonshine manifest
+    plugin :mysql_tools
+    recipe :mysql_tools
