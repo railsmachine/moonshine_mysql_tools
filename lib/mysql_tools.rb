@@ -11,7 +11,7 @@ module MysqlTools
     file '/usr/local/src',
       :ensure => :directory # same here
 
-    exec 'wget mysqltuner.pl',
+    exec 'wget mysqltuner.pl && chmod a+x /usr/sbin/mysqltuner.pl',
       :cwd => "/usr/sbin/",
       :creates => "/usr/sbin/mysqltuner.pl",
       :require => package('wget')
