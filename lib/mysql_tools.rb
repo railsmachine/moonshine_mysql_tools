@@ -3,7 +3,7 @@ module MysqlTools
   def mysql_tools(hash = {})
     options = {
       :maatkit => "http://maatkit.googlecode.com/files/maatkit_5014-1_all.deb",
-      :xtrabackup => "http://www.percona.com/mysql/xtrabackup/0.9/deb/xtrabackup_0.9_amd64.deb",
+      :xtrabackup => "http://www.percona.com/mysql/xtrabackup/1.0/deb/xtrabackup_1.0_amd64.deb",
     }.merge(hash)
 
     package 'mytop', :ensure => :installed
