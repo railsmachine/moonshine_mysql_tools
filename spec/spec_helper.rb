@@ -2,7 +2,9 @@ require 'rubygems'
 ENV['RAILS_ENV'] = 'test'
 ENV['RAILS_ROOT'] ||= File.dirname(__FILE__) + '/../../../..'
 
-require File.join(ENV['RAILS_ROOT'], 'vendor', 'plugins', 'moonshine', 'lib', 'moonshine.rb')
-require File.join(File.dirname(__FILE__), '..', 'lib', 'mysql_tools.rb')
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', '..', 'moonshine', 'lib')
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 
+require 'moonshine'
+require 'moonshine/plugins/mysql_tools'
 require 'shadow_puppet/test'

@@ -1,3 +1,5 @@
-require "#{File.dirname(__FILE__)}/../lib/mysql_tools.rb"
+require 'pathname'
+$LOAD_PATH.unshift Pathname.new(__FILE__).dirname.join('..', 'lib').expand_path
+require 'moonshine/plugins/mysql_tools'
 
-include MysqlTools
+include Moonshine::Plugins::MysqlTools

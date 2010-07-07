@@ -1,7 +1,7 @@
 require File.join(File.dirname(__FILE__), 'spec_helper.rb')
 
 class MysqlToolsManifest < Moonshine::Manifest
-  plugin :mysql_tools
+  include Moonshine::Plugins::MysqlTools
 end
 
 describe "A manifest with the MysqlTools plugin" do
