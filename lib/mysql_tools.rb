@@ -2,7 +2,7 @@ module MysqlTools
 
   def mysql_tools(hash = {})
     options = {
-      :maatkit => "http://maatkit.googlecode.com/files/maatkit_5014-1_all.deb",
+      :maatkit => "http://maatkit.googlecode.com/files/maatkit_6652-1_all.deb",
       :xtrabackup => "http://www.percona.com/downloads/XtraBackup/XtraBackup-1.2/deb/intrepid/x86_64/xtrabackup_1.2-132.intrepid.3_amd64.deb"
     }.merge(hash)
 
