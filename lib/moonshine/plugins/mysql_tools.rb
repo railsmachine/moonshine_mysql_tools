@@ -33,7 +33,7 @@ module Moonshine
              :ensure => "installed",
              :provider => "dpkg",
              :source => "/usr/local/src/#{maatkit_deb}",
-             :require => exec('wget maatkit')
+             :require => [exec('wget maatkit'), package('mysql-server')]
         end
 
         if options[:xtrabackup]
@@ -49,7 +49,7 @@ module Moonshine
              :ensure => "installed",
              :provider => "dpkg",
              :source => "/usr/local/src/#{xtrabackup_deb}",
-             :require => exec('wget xtrabackup')
+             :require => [exec('wget xtrabackup'), package('mysql-server')]
         end
       end
 
