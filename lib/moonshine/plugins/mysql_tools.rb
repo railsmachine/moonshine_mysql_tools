@@ -14,7 +14,7 @@ module Moonshine
           :ensure => :directory # same here
 
         exec 'wget mysqltuner.pl',
-          :command => 'wget -O mysqltuner.pl mysqltuner.pl && chmod a+x /usr/sbin/mysqltuner.pl', 
+          :command => 'wget -O mysqltuner.pl mysqltuner.pl --no-check-certificate && chmod a+x /usr/sbin/mysqltuner.pl', 
           :cwd => "/usr/sbin/",
           :creates => "/usr/sbin/mysqltuner.pl",
           :require => package('wget')
